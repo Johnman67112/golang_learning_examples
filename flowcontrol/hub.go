@@ -1,11 +1,20 @@
 package flowcontrol
 
-func ControlFlow() {
-	callIfElse()
-	callFor()
-	callSwitch()
-	callLogicalOperators()
-	callExercises()
+import "strings"
+
+func ControlFlow(op string) {
+	switch {
+	case strings.Contains(op, "ifelse"):
+		callIfElse()
+	case strings.Contains(op, "for"):
+		callFor()
+	case strings.Contains(op, "switch"):
+		callSwitch()
+	case strings.Contains(op, "logical"):
+		callLogicalOperators()
+	case strings.Contains(op, "ex"):
+		callExercises()
+	}
 }
 
 func callIfElse() {
